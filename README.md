@@ -13,3 +13,15 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
+### Git version
+
+    git --version
+### Python version
+
+    python --version
+
+### Create dataset inside mongodb
+### "wget url" to fetch data from github
+abc@bdf9ef23d7b8:~/workspace$ git remote -v
+abc@bdf9ef23d7b8:~/workspace$ git remote remove origin
+
