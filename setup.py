@@ -1,6 +1,8 @@
 # Any python project , set up file is required at first. We want our code to ge import in some other file
 # Convert code into library using setup.py file
 # Distribution of source code, we can use our code anywhere
+# Create requirement.txt file where all the libraries will be present for installation
+# And mention -e . for editable extensin in the requirements.txt file
 from setuptools import find_packages, setup  
 from typing import List
 
@@ -16,8 +18,8 @@ def get_requirements()-> List[str]:
     return requirement_list
 
 setup(
-    name = "sensor",
-    version = "0.0.1", #keep changing version after modifying
+    name = "sensor", # name of the project
+    version = "0.0.2", #keep changing version after modifying
     author = "ineuron", #author name
     author_email= "subhashdixit17@gmail.com",
     packages = find_packages(),
