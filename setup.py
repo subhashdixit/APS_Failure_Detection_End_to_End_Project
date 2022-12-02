@@ -3,6 +3,7 @@
 # Distribution of source code, we can use our code anywhere
 # Create requirement.txt file where all the libraries will be present for installation
 # And mention -e . for editable extensin in the requirements.txt file
+# We need helper functions, so we will create util folder
 from setuptools import find_packages, setup  
 from typing import List
 
