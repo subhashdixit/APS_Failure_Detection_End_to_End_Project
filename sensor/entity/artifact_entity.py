@@ -7,7 +7,14 @@ Data Injection --> Data Validation --> Data Transformation --> Model Trainer -->
 '''
 # three dot means pass keyword
 
-class DataIngestionArtifact:...
+from dataclasses import dataclass
+
+@dataclass
+class DataIngestionArtifact:
+    feature_store_file_path:str
+    train_file_path:str 
+    test_file_path:str
+
 class DataValidationArtifact:...
 class DataTransformationArtifact:...
 class ModelTrainerArtifact:...
