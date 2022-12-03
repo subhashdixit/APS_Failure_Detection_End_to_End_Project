@@ -1,12 +1,3 @@
-# We will define input structure
-
-# We will define ouput for each componenets
-# 6 configuration have to be defined
-'''
-Data Injection --> Data Validation --> Data Transformation --> Model Trainer --> Model Evaluation --> Model Pusher
-'''
-# three dot means pass keyword
-
 from dataclasses import dataclass
 
 @dataclass
@@ -15,7 +6,11 @@ class DataIngestionArtifact:
     train_file_path:str 
     test_file_path:str
 
-class DataValidationArtifact:...
+@dataclass
+class DataValidationArtifact:
+    report_file_path:str
+
+    
 class DataTransformationArtifact:...
 class ModelTrainerArtifact:...
 class ModelEvaluationArtifact:...

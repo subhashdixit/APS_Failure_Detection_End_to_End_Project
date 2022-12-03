@@ -1,13 +1,3 @@
-# We will define input structure
-
-# We will define ouput for each componenets
-# 6 configuration have to be defined
-'''
-Data Injection --> Data Validation --> Data Transformation --> Model Trainer --> Model Evaluation --> Model Pusher
-'''
-# three dot means pass keyword
-
-
 import os,sys
 from sensor.exception import SensorException
 from sensor.logger import logging
@@ -16,7 +6,6 @@ FILE_NAME = "sensor.csv"
 TRAIN_FILE_NAME = "train.csv"
 TEST_FILE_NAME = "test.csv"
 
-# Store each and every ooutput in single folder
 class TrainingPipelineConfig:
 
     def __init__(self):
@@ -46,7 +35,14 @@ class DataIngestionConfig:
         except Exception  as e:
             raise SensorException(e,sys)     
 
-class DataValidationConfig:...
+class DataValidationConfig:
+
+    def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+        self.data_validation_dir = os.path.join(training_pipeline_config.artifact_dir , "data_validation")
+        self.report_file_path=os.path.join(self.data_validation_dir, "report.yaml")
+        self.missing_threshold:float = 0.2
+        self.base_file_path = os.path.join("aps_failure_training_set1.csv")
+
 class DataTransformationConfig:...
 class ModelTrainerConfig:...
 class ModelEvaluationConfig:...
