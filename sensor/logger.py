@@ -1,5 +1,3 @@
-#Execution details will be present
-# Order of execution CRITICAL > ERROR > WARNING > INFO > DEBUG > NOTSET
 import logging
 import os
 from datetime import datetime

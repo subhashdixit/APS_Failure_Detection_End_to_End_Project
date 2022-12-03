@@ -24,7 +24,7 @@
 # for idx, record in enumerate(all_record):
 #      print(f"{idx}: {record}")
 
-"""Just For TesTing Purpose oof logger and exception"""
+# """Just For TesTing Purpose oof logger and exception"""
 # from sensor.logger import logging
 # from sensor.exception import SensorException
 # import sys, os
